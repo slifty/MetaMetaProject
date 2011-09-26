@@ -1,0 +1,49 @@
+The Meta Project is a tool which provides a simple service: take in any piece of media, spit out all the meta possible.
+
+This document will outline the types of media and the associated metadata it will return
+------------
+TEXT MEDIA
+------------
+Valid Inputs:  URL, Plain Text, HTML
+Optional Inputs: Known Metadata
+Returned Metadata:
+ - Primary Themes (Document-wide)
+ - Primary Themes (Per-paragraph)
+ - Suggested Tags
+ - Entities (Names, Locations) and their locations in text
+
+------------
+VIDEO MEDIA
+------------
+Valid Inputs: URL, Video (format?)
+Optional Inputs: Transcript, Faces, Known Metadata
+Returned Metadata:
+ - Transcript
+ - Moments of audio transition (new speaker)
+ - Moments of video transition (new scene)
+ - OCR data (any text that appears on image) and their timestamps
+ - Entities (Names, Locations) and their timestamps
+ - Suggested Tags
+ - Face identification and their timestamp ranges [only done if faces are provided]
+
+------------
+AUDIO MEDIA
+------------
+Valid Inputs: URL, Audio (mp3, wav)
+Optional Inputs: Transcript, Voice Samples, Known Metadata
+Returned Metadata:
+ - Transcript
+ - Moments of audio transition (new speaker)
+ - Entities (Names, Locations) and their timestamps
+ - Suggested Tags
+ - Voice identification  and their timestamp ranges [only done if voice samples are provided]
+
+------------
+IMAGE MEDIA
+------------
+Valid Inputs: URL, Image (jpg, gif, bmp, png)
+Optional Inputs: Faces, Known Metadata
+Returned Metadata:
+ - OCR data and it's coordinate location
+ - Object identification
+ - Face identification [only done if faces are provided] 
