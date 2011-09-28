@@ -1,7 +1,7 @@
 import json
 import web
 class meta_video:
-	def GET(self, miid='', url='', tasks='{}', results='{}'):
+	def GET(self, miid='', url='', tasks='{}', results='{}', **kwargs):
 		try:
 			tasks = json.loads(tasks)
 			results = json.loads(results)
@@ -25,33 +25,33 @@ class meta_video:
 			results['transcribe'] = meta_text.transcribe()
 		return results
 		
-	def POST(self, video_file='', url='', ttl=180):
+	def POST(self, video_file='', url='', ttl=180, **kwargs):
 		return ''
 		
 	@staticmethod
-	def identify_audio_transitions():
+	def identify_audio_transitions(**kwargs):
 		return ''
 		
 	@staticmethod
-	def identify_entities():
+	def identify_entities(**kwargs):
 		return ''
 		
 	@staticmethod
-	def identify_faces():
+	def identify_faces(**kwargs):
 		return ''
 		
 	@staticmethod
-	def identify_keywords():
+	def identify_keywords(**kwargs):
 		return ''
 		
 	@staticmethod
-	def identify_video_transitions():
+	def identify_video_transitions(**kwargs):
 		return ''
 		
 	@staticmethod
-	def ocr():
+	def ocr(**kwargs):
 		return ''
 		
 	@staticmethod
-	def transcribe():
+	def transcribe(**kwargs):
 		return ''

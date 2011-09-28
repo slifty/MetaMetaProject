@@ -28,7 +28,15 @@ class front_controller:
 			if isinstance(res, dict):
 				web.header('Content-Type', 'application/json')
 				res = json.dumps(res)
-				return res
+				if('callback' in query):
+					return query['callback'] + '(' + res + ')'
+				else:
+					return res
+			else:
+				if('callback' in query):
+					return query['callback'] + '({})'
+				else:
+					return "{}"
 		except TypeError:
 			msg = 'HTTP 400 - Bad Request'
 			if getattr(controller, '__doc__', False):
