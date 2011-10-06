@@ -1,10 +1,16 @@
-The Meta Project is a tool which provides a simple service: take in any piece of media, spit out all the meta possible.
+The Meta Meta Project is a tool which provides a simple service: take in any piece of media, spit out all the meta possible.
 
-For full documentation please visit: https://wiki.mozilla.org/Drumbeat/MoJo/hackfest/berlin/projects/MetaProject
+For API documentation please visit: https://wiki.mozilla.org/Drumbeat/MoJo/hackfest/berlin/projects/MetaMetaProject
+To participate in the project join our google group: http://groups.google.com/group/meta-meta-project
 
 ===INSTALLATION===
+## web.py ##
+Installation Instructions: http://webpy.org/install
+Used:
+ - To provide the API itself
+
 ## nltk ##
 Installation Instructions: http://www.nltk.org/download
 Install Corpus Information: nltk.download()
-Used in:
- Text: identify_keywords
+Used:
+ - identify_keywords
